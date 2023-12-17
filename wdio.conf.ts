@@ -1,5 +1,9 @@
 import type { Options } from '@wdio/types'
+const DEBUG = (process.env.DEBUG === undefined) ? false : (process.
+    env.DEBUG === `true`)
+    let timeout = DEBUG ? 10_000 : 16_000_000
 export const config: Options.Testrunner = {
+    
     //
     // ====================
     // Runner Configuration
@@ -110,7 +114,8 @@ export const config: Options.Testrunner = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    // services: [],
+    outputDir: 'all-logs',
+   
     //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -138,7 +143,7 @@ export const config: Options.Testrunner = {
     // Options to be passed to Jasmine.
     jasmineOpts: {
         // Jasmine default timeout
-        defaultTimeoutInterval: 60000,
+        defaultTimeoutInterval: timeout,
         //
         // The Jasmine framework allows interception of each assertion in order to log the state of the application
         // or website depending on the result. For example, it is pretty handy to take a screenshot every time
@@ -218,8 +223,11 @@ export const config: Options.Testrunner = {
     /**
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
-    // beforeTest: function (test, context) {
-    // },
+    beforeTest: function () {
+
+        browser.maximizeWindow();
+        //browser.setWindowSize(1920, 970)
+    },
     /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
      * beforeEach in Mocha)

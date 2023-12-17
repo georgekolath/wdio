@@ -1,0 +1,135 @@
+2023-12-17T03:36:51.137Z INFO @wdio/local-runner: Run worker command: run
+2023-12-17T03:36:51.838Z INFO webdriver: Initiate new session using the WebDriver protocol
+2023-12-17T03:36:51.952Z INFO webdriver: Using Chromedriver v120.0.6099.109 from cache directory /var/folders/z0/npkd9hjj2rg48bw14p37rbn00000gn/T
+2023-12-17T03:36:52.960Z INFO @wdio/utils: Started Chromedriver v120.0.6099.109 with params --port=50433 --allowed-origins=* --allowed-ips=0.0.0.0 in 1035ms on port 50433
+2023-12-17T03:36:53.041Z INFO webdriver: [POST] http://0.0.0.0:50433/session
+2023-12-17T03:36:53.041Z INFO webdriver: DATA {
+  capabilities: {
+    alwaysMatch: { browserName: 'chrome', 'goog:chromeOptions': [Object] },
+    firstMatch: [ {} ]
+  },
+  desiredCapabilities: {
+    browserName: 'chrome',
+    'goog:chromeOptions': {
+      binary: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+    }
+  }
+}
+2023-12-17T03:36:53.729Z INFO webdriver: COMMAND maximizeWindow()
+2023-12-17T03:36:53.731Z INFO webdriver: COMMAND navigateTo("https://the-internet.herokuapp.com/login")
+2023-12-17T03:36:53.731Z INFO webdriver: [POST] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a/window/maximize
+2023-12-17T03:36:53.732Z INFO webdriver: [POST] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a/url
+2023-12-17T03:36:53.732Z INFO webdriver: DATA { url: 'https://the-internet.herokuapp.com/login' }
+2023-12-17T03:36:54.196Z INFO webdriver: RESULT { height: 1175, width: 1920, x: -1920, y: -33 }
+2023-12-17T03:36:57.703Z INFO webdriver: RESULT null
+2023-12-17T03:36:57.708Z INFO webdriver: COMMAND findElement("css selector", "#username")
+2023-12-17T03:36:57.709Z INFO webdriver: [POST] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a/element
+2023-12-17T03:36:57.710Z INFO webdriver: DATA { using: 'css selector', value: '#username' }
+2023-12-17T03:36:57.720Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '6419A937105234161ABF31A7BF4E5F71_element_76'
+}
+2023-12-17T03:36:57.725Z INFO webdriver: COMMAND elementClear("6419A937105234161ABF31A7BF4E5F71_element_76")
+2023-12-17T03:36:57.725Z INFO webdriver: [POST] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a/element/6419A937105234161ABF31A7BF4E5F71_element_76/clear
+2023-12-17T03:36:57.744Z INFO webdriver: RESULT null
+2023-12-17T03:36:57.745Z INFO webdriver: COMMAND elementSendKeys("6419A937105234161ABF31A7BF4E5F71_element_76", "<Screenshot[base64]>")
+2023-12-17T03:36:57.745Z INFO webdriver: [POST] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a/element/6419A937105234161ABF31A7BF4E5F71_element_76/value
+2023-12-17T03:36:57.745Z INFO webdriver: DATA { text: 'tomsmith' }
+2023-12-17T03:36:57.817Z INFO webdriver: RESULT null
+2023-12-17T03:36:57.818Z INFO webdriver: COMMAND findElement("css selector", "#password")
+2023-12-17T03:36:57.818Z INFO webdriver: [POST] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a/element
+2023-12-17T03:36:57.818Z INFO webdriver: DATA { using: 'css selector', value: '#password' }
+2023-12-17T03:36:57.823Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '6419A937105234161ABF31A7BF4E5F71_element_77'
+}
+2023-12-17T03:36:57.825Z INFO webdriver: COMMAND elementClear("6419A937105234161ABF31A7BF4E5F71_element_77")
+2023-12-17T03:36:57.825Z INFO webdriver: [POST] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a/element/6419A937105234161ABF31A7BF4E5F71_element_77/clear
+2023-12-17T03:36:57.834Z INFO webdriver: RESULT null
+2023-12-17T03:36:57.834Z INFO webdriver: COMMAND elementSendKeys("6419A937105234161ABF31A7BF4E5F71_element_77", "SuperSecretPassword!")
+2023-12-17T03:36:57.834Z INFO webdriver: [POST] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a/element/6419A937105234161ABF31A7BF4E5F71_element_77/value
+2023-12-17T03:36:57.834Z INFO webdriver: DATA { text: 'SuperSecretPassword!' }
+2023-12-17T03:36:57.861Z INFO webdriver: RESULT null
+2023-12-17T03:36:57.862Z INFO webdriver: COMMAND findElement("css selector", "button[type="submit"]")
+2023-12-17T03:36:57.862Z INFO webdriver: [POST] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a/element
+2023-12-17T03:36:57.862Z INFO webdriver: DATA { using: 'css selector', value: 'button[type="submit"]' }
+2023-12-17T03:36:57.867Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '6419A937105234161ABF31A7BF4E5F71_element_83'
+}
+2023-12-17T03:36:57.869Z INFO webdriver: COMMAND elementClick("6419A937105234161ABF31A7BF4E5F71_element_83")
+2023-12-17T03:36:57.869Z INFO webdriver: [POST] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a/element/6419A937105234161ABF31A7BF4E5F71_element_83/click
+2023-12-17T03:36:58.554Z INFO webdriver: RESULT null
+2023-12-17T03:36:58.555Z INFO webdriver: COMMAND findElement("css selector", "#flash")
+2023-12-17T03:36:58.556Z INFO webdriver: [POST] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a/element
+2023-12-17T03:36:58.556Z INFO webdriver: DATA { using: 'css selector', value: '#flash' }
+2023-12-17T03:36:58.563Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': 'DEED1230D32ADFD555054AEA618FFBE6_element_159'
+}
+2023-12-17T03:36:58.566Z INFO webdriver: COMMAND findElements("css selector", "#flash")
+2023-12-17T03:36:58.566Z INFO webdriver: [POST] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a/elements
+2023-12-17T03:36:58.566Z INFO webdriver: DATA { using: 'css selector', value: '#flash' }
+2023-12-17T03:36:58.574Z INFO webdriver: RESULT [
+  {
+    'element-6066-11e4-a52e-4f735466cecf': 'DEED1230D32ADFD555054AEA618FFBE6_element_159'
+  }
+]
+2023-12-17T03:36:58.580Z INFO webdriver: COMMAND findElement("css selector", "#flash")
+2023-12-17T03:36:58.583Z INFO webdriver: [POST] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a/element
+2023-12-17T03:36:58.583Z INFO webdriver: DATA { using: 'css selector', value: '#flash' }
+2023-12-17T03:36:58.587Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': 'DEED1230D32ADFD555054AEA618FFBE6_element_159'
+}
+2023-12-17T03:36:58.589Z INFO webdriver: COMMAND getElementText("DEED1230D32ADFD555054AEA618FFBE6_element_159")
+2023-12-17T03:36:58.589Z INFO webdriver: [GET] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a/element/DEED1230D32ADFD555054AEA618FFBE6_element_159/text
+2023-12-17T03:36:58.595Z INFO webdriver: RESULT You logged into a secure area!
+×
+2023-12-17T03:36:58.597Z INFO webdriver: COMMAND getLogTypes()
+2023-12-17T03:36:58.597Z INFO webdriver: [GET] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a/se/log/types
+2023-12-17T03:36:58.598Z INFO webdriver: RESULT [ 'browser', 'driver' ]
+2023-12-17T03:36:58.598Z INFO webdriver: COMMAND getLogs("driver")
+2023-12-17T03:36:58.598Z INFO webdriver: COMMAND getLogs("browser")
+2023-12-17T03:36:58.598Z INFO webdriver: [POST] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a/se/log
+2023-12-17T03:36:58.598Z INFO webdriver: DATA { type: 'driver' }
+2023-12-17T03:36:58.599Z INFO webdriver: [POST] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a/se/log
+2023-12-17T03:36:58.599Z INFO webdriver: DATA { type: 'browser' }
+2023-12-17T03:36:58.599Z INFO webdriver: RESULT []
+2023-12-17T03:36:58.600Z INFO webdriver: RESULT [
+  {
+    level: 'SEVERE',
+    message: 'https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Flogin&u=oeu1702784216169r0.7181931051812676&wxhr=true&t=1702784216172&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED',
+    source: 'network',
+    timestamp: 1702784216197
+  },
+  {
+    level: 'SEVERE',
+    message: 'https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=engagement&g=298283957&u=oeu1702784216169r0.7181931051812676&wxhr=true&t=1702784217880&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED',
+    source: 'network',
+    timestamp: 1702784217904
+  },
+  {
+    level: 'SEVERE',
+    message: 'https://the-internet.herokuapp.com/favicon.ico - Failed to load resource: the server responded with a status of 404 (Not Found)',
+    source: 'network',
+    timestamp: 1702784217957
+  },
+  {
+    level: 'SEVERE',
+    message: 'https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fsecure&u=oeu1702784216169r0.7181931051812676&wxhr=true&t=1702784218529&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED',
+    source: 'network',
+    timestamp: 1702784218562
+  },
+  {
+    level: 'SEVERE',
+    message: 'https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Flogin&u=oeu1702784216169r0.7181931051812676&wxhr=true&t=1702784216172&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED',
+    source: 'network',
+    timestamp: 1702784218562
+  },
+  {
+    level: 'SEVERE',
+    message: 'https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=engagement&g=298283957&u=oeu1702784216169r0.7181931051812676&wxhr=true&t=1702784217880&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED',
+    source: 'network',
+    timestamp: 1702784218562
+  }
+]
+2023-12-17T03:36:58.600Z INFO webdriver: COMMAND deleteSession()
+2023-12-17T03:36:58.601Z INFO webdriver: [DELETE] http://0.0.0.0:50433/session/27f3210ff88da7e91b4f5dda351b228a
+2023-12-17T03:36:58.653Z INFO webdriver: RESULT null
+2023-12-17T03:36:58.653Z INFO webdriver: Kill /var/folders/z0/npkd9hjj2rg48bw14p37rbn00000gn/T/chromedriver/mac_arm-120.0.6099.109/chromedriver-mac-arm64/chromedriver driver process with command line: --port=50433 --allowed-origins=* --allowed-ips=0.0.0.0
