@@ -1,4 +1,6 @@
 import type { Options } from '@wdio/types'
+
+
 const DEBUG = (process.env.DEBUG === undefined) ? false : (process.
     env.DEBUG === `true`)
     let timeout = DEBUG ? 10_000 : 16_000_000
@@ -74,7 +76,7 @@ export const config: Options.Testrunner = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel: 'warn',
     //
     // Set specific log levels per logger
     // loggers:
@@ -148,9 +150,7 @@ export const config: Options.Testrunner = {
         // The Jasmine framework allows interception of each assertion in order to log the state of the application
         // or website depending on the result. For example, it is pretty handy to take a screenshot every time
         // an assertion fails.
-        // expectationResultHandler: function(passed, assertion) {
-        //     // do something
-        // }
+        
     },
 
     //
@@ -250,11 +250,12 @@ export const config: Options.Testrunner = {
      * @param {boolean} result.passed    true if test has passed, otherwise false
      * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    // afterTest: async function(test, context, { error, result, duration, passed, retries }) {
-    //     if (!passed) {
-    //         await browser.takeScreenshot();
-    //     }
-    // },
+    afterTest: async function( passed ) {
+        if (!passed) {
+            
+            await browser.takeScreenshot();
+        }
+    },
 
 
     /**
@@ -318,4 +319,8 @@ export const config: Options.Testrunner = {
     */
     // afterAssertion: function(params) {
     // }
+
+    
+
+    
 }
